@@ -1,0 +1,4 @@
+const students = [ { name: "Adaeze Obi", score: 92 }, { name: "Emeka Nwosu", score: 75 }, { name: "Fatima Bello", score: 61 }, { name: "Chidi Eze", score: 55 }, { name: "Ngozi Umeh", score: 48 }, { name: "Tunde Alabi", score: 33 }, ];
+ function getGrade(score) { if (score >= 70) { return "A"; } else if (score >= 60) { return "B"; } else if (score >= 50) { return "C"; } else if (score >= 45) { return "D"; } else if (score >= 40) { return "E"; } else { return "F"; } } 
+ function getStatus(score) { if (score >= 50) { return "Pass"; } else { return "Fail"; } }
+ students.forEach(function(student) { const grade = getGrade(student.score); const status = getStatus(student.score); console.log(`${student.name} scored ${student.score} and received grade ${grade}. Status: ${status}`); });
